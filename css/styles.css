@@ -1,0 +1,419 @@
+/* ============================================
+   COACH JONES - Main Stylesheet
+   Matching live site: www.coachjones.co
+
+   Fonts: Raleway (brand font), Cormorant Garamond (headings)
+   ============================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  /* Brand Colors - From branding files */
+  --color-green: #1a5d1a;
+  --color-gold: #c9920e;
+  --color-dark: #333333;
+  --color-gray: #666666;
+  --color-light: #ffffff;
+  --color-border: #333333;
+
+  /* Typography - Raleway is the brand font */
+  --font-primary: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+
+  /* Spacing */
+  --container-max: 900px;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-gold);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   HEADER / NAVIGATION
+   ============================================ */
+
+.header {
+  background-color: var(--color-green);
+  padding: 1.25rem 2rem;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.logo__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.logo__text {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-light);
+  letter-spacing: 0.5px;
+}
+
+/* Vertical divider after logo */
+.logo__divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-light);
+  margin-left: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav__link {
+  color: var(--color-light);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-gold);
+  font-family: var(--font-primary);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.btn-login__icon {
+  width: 26px;
+  height: 26px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-login__icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Mobile Navigation */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-light);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.main {
+  min-height: calc(100vh - 200px);
+}
+
+.section {
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Divider line below header */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
+
+/* ============================================
+   PAGE TITLES
+   ============================================ */
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: var(--color-green);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.5px;
+}
+
+.page-title--large {
+  font-size: 4rem;
+  letter-spacing: 1px;
+}
+
+.title-divider {
+  width: 350px;
+  max-width: 80%;
+  height: 2px;
+  background-color: var(--color-border);
+  margin: 0 auto var(--spacing-md);
+}
+
+/* ============================================
+   HOME PAGE
+   ============================================ */
+
+.home-content {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.home-content p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--color-dark);
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.about-content {
+  padding: var(--spacing-md) 0;
+}
+
+.about-lead {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+}
+
+.about-content p {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.9;
+}
+
+/* ============================================
+   OFFICES PAGE
+   ============================================ */
+
+.offices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.office {
+  text-align: left;
+}
+
+.office__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.5px;
+}
+
+.office__address {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--color-dark);
+}
+
+.office__address p {
+  margin: 0;
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
+.contact-content {
+  padding: var(--spacing-md) 0;
+}
+
+.contact-content p {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.9;
+}
+
+.contact-content a {
+  color: var(--color-dark);
+}
+
+.contact-content a:hover {
+  color: var(--color-gold);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+}
+
+.footer p {
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.footer a {
+  color: var(--color-gold);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .header__container {
+    flex-wrap: wrap;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .nav--open {
+    display: flex;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .offices-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .office {
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-title--large {
+    font-size: 2.75rem;
+  }
+
+  .logo__text {
+    font-size: 1.4rem;
+  }
+}
