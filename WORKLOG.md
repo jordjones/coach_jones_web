@@ -2,6 +2,7 @@
 
 > Last updated: 2026-03-01
 > Active session: none
+> Last session: 2026-03-01 (doc-standardization)
 
 ---
 
@@ -39,6 +40,13 @@
 ---
 
 ## Completed
+
+### doc-standardization
+**Goal:** Bring project documentation up to portfolio-wide standards
+**Status:** COMPLETE
+**Completed:** 2026-03-01
+**Summary:** Created CLAUDE.md (stack, brand identity, site structure, known limitations, token_coach cross-reference). Rewrote WORKLOG.md with standardized format and gleaned 3 future workstreams from codebase audit (client-portal, deployment, content-refresh). Added `.claude/` to .gitignore. Pushed to origin/main.
+**Key files:** `CLAUDE.md`, `WORKLOG.md`, `.gitignore`
 
 ### static-site
 **Goal:** Build the Coach Jones LLC marketing website
