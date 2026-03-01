@@ -2,7 +2,7 @@
 
 > Last updated: 2026-03-01
 > Active session: none
-> Last session: 2026-03-01 (doc-standardization)
+> Last session: 2026-03-01 (deployment)
 
 ---
 
@@ -18,15 +18,6 @@
 - [ ] Stand up backend or serverless function for login
 - [ ] Add protected client dashboard page(s)
 
-### deployment
-**Goal:** Host the site publicly and set up CI/CD
-**Status:** NOT STARTED
-**Context:** Site is local-only. No hosting, no domain, no CI/CD. Domain `www.coachjones.co` referenced in `css/styles.css` comment but not confirmed active.
-**Next steps:**
-- [ ] Choose hosting (GitHub Pages, Netlify, or custom)
-- [ ] Configure custom domain if available
-- [ ] Add deployment workflow
-
 ### content-refresh
 **Goal:** Audit and update site copy for accuracy
 **Status:** NOT STARTED
@@ -40,6 +31,13 @@
 ---
 
 ## Completed
+
+### deployment
+**Goal:** Host the site publicly and set up CI/CD
+**Status:** COMPLETE
+**Completed:** 2026-03-01
+**Summary:** GitHub Pages was already enabled on the repo (legacy build from `main` branch root). Verified site is live and rendering correctly at https://jordjones.github.io/coach_jones_web/ — all 5 pages, CSS, logos, nav working. Custom domain setup deferred.
+**Key files:** N/A (no config files needed — static site served directly from repo root)
 
 ### doc-standardization
 **Goal:** Bring project documentation up to portfolio-wide standards
